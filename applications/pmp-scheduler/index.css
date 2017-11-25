@@ -1,0 +1,97 @@
+body {
+  background-color: #fff
+}
+
+#app {
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2C3350;
+  margin-top: 60px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.signout-btn {
+  position: absolute;
+  text-align: right;
+  top: 60px;
+  right: 40px;
+}
+
+.form {
+}
+
+.v-select, .dropdown-toggle {
+  width: 100%;
+  font-size: 11px;
+}
+
+.v-select {
+  float: right;
+  overflow: hidden;
+  width: 800px;
+  border: 1px solid yellow;
+}
+
+.v-select::after {
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 70%,rgba(0,0,0,0.15) 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.selected-tag {
+  box-sizing: border-box;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.location-wrapper {
+  display: block;
+  margin: 10px;
+}
+
+.event-card {
+  border: 2px solid #2C3E50;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.employees {
+  margin-top: 10px;
+  clear: both;
+}
+
+.employee {
+  box-sizing: border-box;
+  border: 1px solid darkseagreen;
+  border-radius: 3px;
+  padding: 3px;
+  font-size: 11px;
+}
+
+.time {
+  position: fixed;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100vw;
+  border-bottom:  2px orange;
+  padding: 8px;
+}
+
+.time > * {
+  margin: 3px;
+}
+
+.location-label {
+  display: inline-block;
+  float: left;
+}

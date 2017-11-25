@@ -1,8 +1,8 @@
 {
-  "name": "turnout",
+  "name": "pmp-scheduler",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "davidkatz <15Dkatz@shcp.edu>",
+  "author": "Mark Noonan <markthomasnoonan@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "firebase": "^3.7.4",
+    "moment": "^2.19.1",
     "vue": "^2.2.1",
     "vue-router": "^2.3.1",
     "vuex": "^2.2.1"

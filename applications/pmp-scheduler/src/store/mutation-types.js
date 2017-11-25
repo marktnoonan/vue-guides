@@ -1,0 +1,6 @@
+export const SIGN_IN = 'SIGN_IN'
+export const SIGN_OUT = 'SIGN_OUT'
+export const SET_WORK_PERIODS = 'SET_WORK_PERIODS'
+export const PULL_INDIVIDUAL = 'PULL_INDIVIDUAL'
+export const SET_REQUESTED_TIME = 'SET_REQUESTED_TIME'
+export const SET_CURRENT_DAY_TYPE = 'SET_CURRENT_DAY_TYPE'
