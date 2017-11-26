@@ -1,12 +1,10 @@
 import Vue from 'vue'
 import App from './components/App.vue'
 import VueRouter from 'vue-router'
-import vSelect from 'vue-select'
 
 import { firebaseApp } from './firebaseApp'
 
 Vue.use(VueRouter)
-Vue.component('v-select', vSelect)
 
 import store from './store'
 
