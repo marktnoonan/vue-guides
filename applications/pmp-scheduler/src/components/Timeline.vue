@@ -17,18 +17,29 @@ since it can only be one time at a time!
     <form class="form-inline">
           <input class="form-control" type="date" v-model="activeDate"></input> ({{currentDayType}}) Time
     <select class="timepoints" v-model="requestedTimepoint" id="timepoint-selector">
-     <option v-for="timepoint in todaysTimepoints" :value="timepoint">{{timepoint}}</option>
- </select><button type="button" class="btn btn-primary btn-xs" @click="playThroughDay" name="button">Play this day</button><button class="btn btn-default btn-xs">Add a timepoint</button>
+      <option v-for="timepoint in todaysTimepoints" :value="timepoint" :key="timepoint">{{timepoint}}</option>
+    </select>
+    <button 
+      type="button" 
+      class="btn btn-primary btn-xs" 
+      @click="playThroughDay" 
+      name="button">
+      Play this day
+      </button>
+      
+      <button class="btn btn-default btn-xs">Add a timepoint</button>
 
     </form>
   </nav>
   <h3>Timeline</h3>
   <hr>
+  <Transportation />
   <div class="form locations">
-    <div class="location-wrapper" v-for="location in locations">
+    <div class="location-wrapper" v-for="(location, index) in locations" :key="location">
       <div class="form-group location">
+        
         <span class="location-label"><b>{{location}}</b></span>
-        <list-of-people v-model="baselines[currentDayType][requestedTimepoint][location].individuals" :available-people="individuals" />
+        <list-of-people v-model="baselines[currentDayType][requestedTimepoint][location].individuals" :available-people="individuals" :id="index" />
       </div>
     </div>
   </div>
@@ -40,6 +51,7 @@ import { firebaseApp, workPeriodsRef } from "../firebaseApp";
 import AddWorkPeriod from "./AddWorkPeriod.vue";
 import EventItem from "./EventItem.vue";
 import ListOfPeople from "./ListOfPeople.vue";
+import Transportation from "./Transportation.vue";
 
 const moment = require("moment");
 
@@ -86,7 +98,8 @@ export default {
     }
   },
   components: {
-    ListOfPeople
+    ListOfPeople,
+    Transportation
   },
   filters: {},
   computed: {

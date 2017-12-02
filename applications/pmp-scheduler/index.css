@@ -29,8 +29,7 @@ body {
   border: none;
 }
 
-.v-select {
-  overflow: hidden;
+.v-select { 
   width: 100%;
 }
 
@@ -81,7 +80,6 @@ body {
 }
 
 .location-label {
-  display: inline-block;
   float: left;
   margin: 2px;
   padding: 2px;
