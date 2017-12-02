@@ -15,7 +15,7 @@
 </Div>
 </template>
 
-<<script>
+<script>
 export default {
  data(){
      return {
@@ -44,5 +44,10 @@ export default {
     padding: 2px 2px 4px 2px;
     border-radius: 4px;
 }
+
+.has-people {
+    background-color: lightseagreen;
+}
+
 </style>
 
